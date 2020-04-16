@@ -1,0 +1,41 @@
+[Adblock Plus 2.0]
+! Title: Kiss Filters
+! Expires: 1 days
+! Homepage: https://github.com/Yumire/kiss-filters
+! Description: A list of filters for use with the various Kiss sites.
+
+# ==========
+# KissAnime
+# ==========
+
+||kissanime.ru^*.aspx$subdocument,first-party
+kissanime.ru##div.divCloseBut
+kissanime.ru##.videoAdClose
+kissanime.ru###adsIfrme7
+
+# One of these should work ¯\_(ツ)_/¯
+kissanime.ru##+js(abort-current-inline-script.js, InitCloseButton)
+kissanime.ru##+js(abort-current-inline-script.js, isClickHide)
+kissanime.ru##+js(abort-current-inline-script.js, AddCloseButton)
+
+kissanime.ru###divContentVideo:style(display: block !important)
+kissanime.ru###divVideo:style(display: block !important)
+
+# CF Captcha Fix
+@@||hcaptcha.com$script,domain=kissanime.ru
+
+# ==========
+# KissManga
+# ==========
+
+||kissmanga.com^*.aspx$subdocument,first-party
+
+# Doing this here too ¯\_(ツ)_/¯
+kissmanga.com##+js(abort-current-inline-script.js, InitCloseButton)
+kissmanga.com##+js(abort-current-inline-script.js, isClickHide)
+kissmanga.com##+js(abort-current-inline-script.js, AddCloseButton)
+
+kissmanga.com###divImage:style(display: block !important)
+kissmanga.com###btnShowComments:style(display: inline-block !important)
+
+@@||file-comic-99.anyacg.co^$image,domain=kissmanga.com
