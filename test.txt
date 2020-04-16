@@ -39,3 +39,24 @@ kissmanga.com###divImage:style(display: block !important)
 kissmanga.com###btnShowComments:style(display: inline-block !important)
 
 @@||file-comic-99.anyacg.co^$image,domain=kissmanga.com
+
+
+# ==========
+# KissAsian
+# ==========
+
+||kissasian.sh^*.aspx$subdocument,first-party
+kissasian.sh##div.divCloseBut
+kissasian.sh##.videoAdClose
+kissasian.sh###adsIfrme7
+
+# One of these should work ¯\_(ツ)_/¯
+kissasian.sh##+js(abort-current-inline-script.js, InitCloseButton)
+kissasian.sh##+js(abort-current-inline-script.js, isClickHide)
+kissasian.sh##+js(abort-current-inline-script.js, AddCloseButton)
+
+kissasian.sh###divContentVideo:style(display: block !important)
+kissasian.sh###divVideo:style(display: block !important)
+
+# CF Captcha Fix
+@@||hcaptcha.com$script,domain=kissasian.sh
